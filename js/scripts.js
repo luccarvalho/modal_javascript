@@ -3,6 +3,10 @@ const closeModalButton = document.querySelector("#close-modal");
 const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
 
+const toggleModal = () => {
+    [modal, fade].forEach((e) => e.classList.toggle("hide"));
+};
+
 [openModalButton, closeModalButton, fade].forEach((e) => {
-    e.addEventListener("click", () => console.log("teste"))
+    e.addEventListener("click", () => toggleModal());
 });
